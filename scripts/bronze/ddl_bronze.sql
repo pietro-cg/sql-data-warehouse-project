@@ -1,19 +1,3 @@
-/*
-===============================================================================
- Script: Create Bronze Layer Tables
- Purpose:
-   This script creates the tables for the Bronze layer of the Data Warehouse.
-   The Bronze layer stores raw data as extracted from the source systems
-   (CRM and ERP), without applying any transformations or business rules.
-
- Description:
-   - Drops existing tables in the 'bronze' schema, if they already exist.
-   - Creates base tables for ingesting customer, product, sales, and
-     supporting master data.
-
-===============================================================================
-*/
-
 IF OBJECT_ID ('bronze.crm_cust_info', 'U') IS NOT NULL
 	DROP TABLE bronze.crm_cust_info;
 CREATE TABLE bronze.crm_cust_info (
@@ -21,7 +5,7 @@ CREATE TABLE bronze.crm_cust_info (
 	cst_key NVARCHAR(50),
 	cst_firstname NVARCHAR(50),
 	cst_lastname NVARCHAR(50),
-	cst_material_status NVARCHAR(50),
+	cst_marital_status NVARCHAR(50),
 	cst_gndr NVARCHAR(50),
 	cst_create_date DATE
 );

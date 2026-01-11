@@ -1,90 +1,84 @@
-# 📊 Data Warehouse em Microsoft SQL Server  
-### Arquitetura Medallion (Bronze · Silver · Gold)
+# 📊 Data Warehouse on Microsoft SQL Server  
+## Medallion Architecture (Bronze · Silver · Gold)
 
-Este repositório apresenta um **projeto pessoal de Data Warehouse** desenvolvido em **Microsoft SQL Server**, com foco em **boas práticas de modelagem, arquitetura de dados e organização de pipelines**, utilizando o conceito de **Medallion Architecture**.
+This repository presents a **personal Data Warehouse project** developed using **Microsoft SQL Server**, with a strong focus on **data architecture best practices**, **data modeling**, and **well-structured data pipelines**, following the **Medallion Architecture** approach.
 
-O objetivo do projeto é servir como **referência prática e educacional** para a construção de um Data Warehouse moderno, escalável e bem documentado, cobrindo desde a ingestão dos dados até a camada analítica final.
+The main goal of this project is to serve as a **practical and educational reference** for building a modern, scalable, and well-documented Data Warehouse, covering the entire process from **data ingestion** to the **final analytical layer**.
 
 ---
 
-## 🏗️ Arquitetura do Projeto
+## 🏗️ Project Architecture
 
-O Data Warehouse está organizado seguindo a **Medallion Architecture**, dividida em três camadas principais:
+The Data Warehouse is organized according to the **Medallion Architecture**, divided into three main layers:
 
 ### 🟤 Bronze Layer
-- Camada de **ingestão de dados brutos**
-- Estrutura próxima à origem dos dados
-- Sem transformações complexas
-- Foco em rastreabilidade, histórico e auditoria
-- Ideal para reprocessamentos e validações iniciais
+- Raw data ingestion layer  
+- Structure closely aligned with source systems  
+- No complex transformations applied  
+- Focus on traceability, historical data, and auditing  
+- Ideal for reprocessing and initial data validation  
 
 ### ⚪ Silver Layer
-- Camada de **tratamento e padronização**
-- Limpeza de dados, normalizações e regras de negócio intermediárias
-- Deduplicações, ajustes de tipos e padronização de nomenclaturas
-- Base confiável para consumo analítico
+- Data cleansing and standardization layer  
+- Data cleaning, normalization, and intermediate business rules  
+- Deduplication, data type adjustments, and naming standardization  
+- Reliable and consistent base for analytical consumption  
 
 ### 🟡 Gold Layer
-- Camada **analítica e orientada ao negócio**
-- Modelagem dimensional (fatos e dimensões)
-- Estruturas otimizadas para consumo por ferramentas de BI
-- Métricas consolidadas e regras de negócio finais
+- Business-oriented analytical layer  
+- Dimensional modeling (fact and dimension tables)  
+- Structures optimized for BI and analytics tools  
+- Consolidated metrics and final business rules  
 
 ---
 
-## 🧩 Modelagem de Dados
+## 🧩 Data Modeling
 
-O projeto inclui diferentes artefatos de modelagem, como:
+The project includes multiple **data modeling artifacts**, such as:
 
-- Modelos conceituais e lógicos  
-- Modelagem dimensional (Star Schema / Snowflake quando aplicável)  
-- Definição de tabelas fato e dimensão  
-- Relacionamentos e granularidades  
-- Documentação das regras de negócio aplicadas em cada camada  
+- Conceptual and logical data models  
+- Dimensional modeling (Star Schema / Snowflake where applicable)  
+- Fact and dimension table definitions  
+- Relationships and data granularity  
+- Documentation of business rules applied at each layer  
 
-Esses materiais têm como objetivo **facilitar o entendimento da arquitetura**, apoiar manutenções futuras e garantir consistência na evolução do Data Warehouse.
-
----
-
-## 🗂️ Estrutura do Repositório
-
-O repositório está organizado para refletir as camadas e componentes do Data Warehouse, incluindo:
-
-- Scripts SQL por camada (Bronze, Silver e Gold)
-- Arquivos de arquitetura e diagramas
-- Documentação técnica e explicativa
-- Estruturas de tabelas, views e objetos auxiliares
-- Padrões de nomenclatura e organização
-
-Essa abordagem facilita tanto o **versionamento** quanto a **manutenção e escalabilidade** do projeto.
+These artifacts aim to improve architectural understanding, support future maintenance, and ensure consistency as the Data Warehouse evolves.
 
 ---
 
-## 🎯 Objetivos do Projeto
+## 🗂️ Repository Structure
 
-- Aplicar conceitos modernos de **arquitetura de dados**
-- Demonstrar boas práticas em **SQL Server**
-- Servir como **portfólio técnico**
-- Apoiar estudos sobre **Data Warehousing, BI e Analytics**
-- Criar uma base sólida para evolução com:
-  - Orquestração
-  - Automação de cargas
-  - Testes de qualidade de dados
-  - Integração com ferramentas de visualização
+The repository is organized to clearly reflect the **layers and components** of the Data Warehouse, including:
 
----
+- SQL scripts by layer (Bronze, Silver, and Gold)  
+- Architecture files and diagrams  
+- Technical and explanatory documentation  
+- Table structures, views, and supporting objects  
+- Naming conventions and organizational standards  
 
-## 🚀 Tecnologias Utilizadas
-
-- **Microsoft SQL Server**
-- **SQL (DDL, DML, Views, Stored Procedures)**
-- Conceitos de **Data Warehouse & BI**
-- **Medallion Architecture**
-- Modelagem Dimensional
+This structure supports effective version control, maintainability, and project scalability.
 
 ---
 
-## 📌 Considerações Finais
+## 🎯 Project Goals
 
-Este projeto está em constante evolução e foi pensado para refletir cenários reais encontrados em ambientes corporativos, equilibrando **clareza arquitetural, performance e boas práticas**.
+- Apply modern data architecture concepts  
+- Demonstrate SQL Server best practices  
+- Serve as a technical portfolio project  
+- Support learning in Data Warehousing, BI, and Analytics  
+- Build a solid foundation for future enhancements, such as:
+  - Orchestration  
+  - Load automation  
+  - Data quality testing  
+  - Integration with data visualization tools  
+
+---
+
+## 🚀 Technologies Used
+
+- Microsoft SQL Server  
+- SQL (DDL, DML, Views, Stored Procedures)  
+- Data Warehouse & BI concepts  
+- Medallion Architecture  
+- Dimensional Modeling  
 

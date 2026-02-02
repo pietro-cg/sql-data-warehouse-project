@@ -1,4 +1,4 @@
-# 📊 Data Warehouse on Microsoft SQL Server  
+# Data Warehouse on Microsoft SQL Server  
 ## Medallion Architecture (Bronze · Silver · Gold)
 
 This repository presents a **personal Data Warehouse project** developed using **Microsoft SQL Server**, with a strong focus on **data architecture best practices**, **data modeling**, and **well-structured data pipelines**, following the **Medallion Architecture** approach.
@@ -7,32 +7,35 @@ The main goal of this project is to serve as a **practical and educational refer
 
 ---
 
-## 🏗️ Project Architecture
+## Project Architecture
 
 The Data Warehouse is organized according to the **Medallion Architecture**, divided into three main layers:
 
-### 🟤 Bronze Layer
+### Bronze Layer
 - Raw data ingestion layer  
 - Structure closely aligned with source systems  
 - No complex transformations applied  
 - Focus on traceability, historical data, and auditing  
 - Ideal for reprocessing and initial data validation  
 
-### ⚪ Silver Layer
+### Silver Layer
 - Data cleansing and standardization layer  
 - Data cleaning, normalization, and intermediate business rules  
 - Deduplication, data type adjustments, and naming standardization  
 - Reliable and consistent base for analytical consumption  
 
-### 🟡 Gold Layer
+### Gold Layer
 - Business-oriented analytical layer  
 - Dimensional modeling (fact and dimension tables)  
 - Structures optimized for BI and analytics tools  
-- Consolidated metrics and final business rules  
+- Consolidated metrics and final business rules
+
+<img width="1281" height="661" alt="DWH Architecture" src="https://github.com/user-attachments/assets/409be567-4b09-4322-9269-a87e92d5e71d" />
+
 
 ---
 
-## 🧩 Data Modeling
+## Data Modeling
 
 The project includes multiple **data modeling artifacts**, such as:
 
@@ -46,7 +49,7 @@ These artifacts aim to improve architectural understanding, support future maint
 
 ---
 
-## 🗂️ Repository Structure
+## Repository Structure
 
 The repository is organized to clearly reflect the **layers and components** of the Data Warehouse, including:
 
@@ -60,7 +63,7 @@ This structure supports effective version control, maintainability, and project 
 
 ---
 
-## 🎯 Project Goals
+## Project Goals
 
 - Apply modern data architecture concepts  
 - Demonstrate SQL Server best practices  
@@ -74,7 +77,7 @@ This structure supports effective version control, maintainability, and project 
 
 ---
 
-## 🚀 Technologies Used
+## Technologies Used
 
 - Microsoft SQL Server  
 - SQL (DDL, DML, Views, Stored Procedures)  
